@@ -15,6 +15,8 @@ import django_heroku
 import dj_database_url
 from decouple import config,Csv
 
+LOGIN_REDIRECT_URL = 'newsToday'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -45,6 +47,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'news.apps.NewsConfig',
     'bootstrap3',
     'django.contrib.admin',
